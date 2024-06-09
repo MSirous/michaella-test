@@ -1,0 +1,305 @@
+/* styles.css */
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 60px; /* Adjust this value if needed to avoid content being hidden behind navbar */
+    padding: 20px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    right: 700px;
+    transform: translate(-50%, -20%);
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    padding: 60px;
+    border-radius: 10px;
+    border-radius: 1px 100px 100px 1px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: white;
+}
+
+.hero-text .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.content {
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+}
+
+.featured {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.featured img {
+    width: 50%;
+    height: auto;
+}
+
+.featured-text {
+    padding: 20px;
+}
+
+.featured-text h2 {
+    font-size: 2em;
+}
+
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product .price {
+    font-size: 1em;
+}
+
+.product .old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+
+/* Products */
+
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 25%; /* Adjust the width of each slide */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.slide a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1em;
+}
+
+.price span {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 10px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+
+
+.overlay-image {
+    position: relative;
+    width: 40%;
+    margin-right: 20px;
+    overflow: hidden;  /* Ensure the image doesn't overflow its container */
+}
+
+.overlay-image img {
+    width: 96%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;  /* Smooth transition for the zoom effect */
+}
+
+.overlay-image:before {
+    content: '';
+    position: absolute;
+    top: 20px;  /* Adjust these values to make the overlay more visible */
+    left: 20px;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.overlay-image:hover img {
+    transform: scale(1.1);  /* Scale the image up on hover */
+}
+
+.text-content {
+    width: 50%;
+}
+
+.text-content h1 {
+    font-size: 3em;
+    color: #012d59;
+    margin-bottom: 40px;
+}
+
+.text-content p {
+    font-size: 1em;
+    color: #34495e;
+    font-family: 'Open Sans', sans-serif; 
+    line-height: 1.6;
+}
+
+
+/* fonts: */
+/* h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px; 
+} */
+
+p {
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 400; 
+}
+spam{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 50px; 
+    /* letter-spacing: 2px; */
+    -webkit-text-stroke: 2px #04daf1;
+    color: transparent;
+} 
